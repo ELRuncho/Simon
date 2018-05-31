@@ -1,0 +1,140 @@
+body{
+	background-image: url("https://i.pinimg.com/originals/f5/56/97/f55697e8134eecb577643096d560293b.jpg");
+}
+.colorButtons{
+	margin:auto;
+	background-color: black;
+	border: 16px solid black;
+	border-radius: 50%;
+	box-shadow: 5px 
+	-webkit-box-shadow: 0px 0px 25px 1px rgba(54,54,54,0.9);
+	-moz-box-shadow: 0px 0px 25px 1px rgba(54,54,54,0.9);
+	box-shadow: 0px 0px 25px 1px rgba(54,54,54,0.9);
+}
+.greenButton{
+	border-radius: 100% 0 0 0;
+	background-color: green;
+}
+.redButton{
+	border-radius: 0 100%  0 0;
+	background-color: red;
+}
+.yellowButton{
+	border-radius: 0 0 100% 0;
+	background-color: yellow;
+}
+.blueButton{
+	border-radius: 0 0 0 100%;
+	background-color: blue;
+}
+.comandPanel{
+	z-index: 1;
+	width: 250px;
+	height: 250px;
+	background-color: #d9d9d9;
+	border-radius: 50%;
+	border:13px solid black;
+}
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  top: 27px;
+  left: 44px;
+  right: -42px;
+  bottom: -24px;
+  cursor: pointer;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+#strictSlide{
+  position: absolute;
+  top: 27px;
+  left: 32px;
+  right: -31px;
+  bottom: -24px;
+  cursor: pointer;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.switch input {display:none;}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#strictSlide .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.onOff input:checked + .slider {
+  background-color: #33cc33;
+}
+.strict input:checked + #strictSlide {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+h3 {
+	font-size: 0.89em;
+}
+
+#off{
+	position: absolute;
+	left: 25px;
+	top: 19px;
+}
+#on{
+	position: absolute;
+	left: 103px;
+	top: 19px;
+}
+#strictTitle{
+	position: absolute;
+	left: 44px;
+	top: -3px;
+}
+#title{
+	position: relative;
+	left: 33px;
+	top: 32px;
+	font-size: 2.7em;
+}
