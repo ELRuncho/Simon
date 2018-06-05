@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Elruncho's Simon Game</title>
 	<link rel="stylesheet" type="text/css" href="./grid.css">
 	<link rel="stylesheet" type="text/css" href="./style.css">
@@ -8,10 +9,10 @@
 <body>
 	<div class='container'>
 		<div class='colorButtons'>
-			<div class="greenButton"></div>
-			<div class="redButton"></div>
-			<div class="blueButton"></div>
-			<div class="yellowButton"></div>
+			<div id="green" class="greenButton"></div>
+			<div id="red" class="redButton"></div>
+			<div id="blue" class="blueButton"></div>
+			<div id="yellow" class="yellowButton"></div>
 		</div>
 		<div class="comandPanel">
 			<div class="title">
@@ -20,17 +21,18 @@
 			<div class="controls">
 				<label class="onOff switch">
 					<h3 id="off">off</h3>
-					<input type="checkbox">
+					<input id="power" type="checkbox">
 					<span class="slider round"></span>
 					<h3 id="on">on</h3>
 				</label>
 				<label class="strict switch">
 					<h3 id="strictTitle">strict</h3>
-					<input type="checkbox">
+					<input id="strictSwitch" type="checkbox">
 					<span id="strictSlide" class="slider round"></span>
 				</label>
 			</div>
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="./script.js"></script>
 </html>
