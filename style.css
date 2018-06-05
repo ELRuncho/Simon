@@ -1,10 +1,11 @@
 body{
 	background-image: url("https://i.pinimg.com/originals/f5/56/97/f55697e8134eecb577643096d560293b.jpg");
 }
+
 .colorButtons{
 	margin:auto;
-	background-color: black;
-	border: 16px solid black;
+	background-color: #272626;
+	border: 20px solid #272626;
 	border-radius: 50%;
 	box-shadow: 5px 
 	-webkit-box-shadow: 0px 0px 25px 1px rgba(54,54,54,0.9);
@@ -12,20 +13,80 @@ body{
 	box-shadow: 0px 0px 25px 1px rgba(54,54,54,0.9);
 }
 .greenButton{
+	transition: 0.3s;
+	cursor: pointer;
 	border-radius: 100% 0 0 0;
 	background-color: green;
 }
+.greenButtonALt{
+	border-radius: 100% 0 0 0;
+	background-color: var(--green);
+	animation-name:  greenbounce ;
+	animation-duration: 0.8s;
+}
+@keyFrames greenbounce{
+	0%, 49% {background-color: green;}
+	50%, 100% {background-color: #03e203; }
+}
+.greenButton:active{
+	background-color: #03e203;
+}
 .redButton{
+	transition: 0.3s;
+	cursor: pointer;
 	border-radius: 0 100%  0 0;
+	background-color: #cc0000;
+}
+.redButtonAlt{
+	border-radius: 0 100%  0 0;
+	background-color: #cc0000;
+	animation-name:  redbounce ;
+	animation-duration: 0.8s;
+}
+@keyFrames redbounce{
+	0%, 49% {background-color: #cc0000;}
+	50%, 100% {background-color: red; }
+}
+.redButton:active{
 	background-color: red;
 }
 .yellowButton{
+	transition: 0.3s;
+	cursor: pointer;
 	border-radius: 0 0 100% 0;
+	background-color: #cbcb01;
+}
+.yellowButtonAlt{
+	border-radius: 0 0 100% 0;
+	background-color: #cbcb01;
+	animation-name:  yellowbounce;
+	animation-duration: 0.8s;
+}
+@keyFrames yellowbounce{
+	0%, 49% {background-color: #cbcb01;}
+	50%, 100% {background-color: yellow; }
+}
+.yellowButton:active{
 	background-color: yellow;
 }
 .blueButton{
+	transition: 0.3s;
+	cursor: pointer;
 	border-radius: 0 0 0 100%;
 	background-color: blue;
+}
+.blueButtonAlt{
+	border-radius: 0 0 0 100%;
+	background-color: blue;
+	animation-name:  yellowbounce;
+	animation-duration: 0.8s;
+}
+@keyFrames bluebounce{
+	0%, 49% {background-color: blue;}
+	50%, 100% {background-color: #3535fd; }
+}
+.blueButton:active{
+	background-color: #3535fd;
 }
 .comandPanel{
 	z-index: 1;
@@ -33,7 +94,7 @@ body{
 	height: 250px;
 	background-color: #d9d9d9;
 	border-radius: 50%;
-	border:13px solid black;
+	border:20px solid #272626;
 }
 .switch{
   position: relative;
@@ -52,6 +113,7 @@ body{
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  box-shadow: inset 0 0 3px 1px;
 }
 #strictSlide{
   position: absolute;
@@ -63,6 +125,7 @@ body{
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  box-shadow: inset 0 0 3px 1px;
 }
 .switch input {display:none;}
 
